@@ -6,17 +6,19 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
         ContainerRect contenedor = new ContainerRect(5);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.println("Ingrese una esquina del rectángulo:");
-            double x1 = scanner.nextDouble(), y1 = scanner.nextDouble();
+            double x1 = scanner.nextDouble();
+            double y1 = scanner.nextDouble();
             System.out.println("Ingrese la esquina opuesta del rectángulo:");
-            double x2 = scanner.nextDouble(), y2 = scanner.nextDouble();
+            double x2 = scanner.nextDouble();
+            double y2 = scanner.nextDouble();
 
             Rectangulo rect = new Rectangulo(new Coordenada(x1, y1), new Coordenada(x2, y2));
             contenedor.addRectangulo(rect);
         }
 
-        contenedor.mostrarRectangulos();
+        System.out.println(contenedor);
         scanner.close();
     }
 }
